@@ -1,0 +1,12 @@
+Typography:
+- Fonts: Serif (for headings - Playfair Display/Merriweather) & Sans-serif (for text - Inter/Roboto)
+- H1: ~64px
+- H2: ~48px
+- Body text: 16px, 14px
+
+Colors:
+- Primary Dark (Backgrounds, Footer): #111827 (Dark Navy/Black)
+- Accent Green (Icons, Highlights, Button): #10B981 / #047857
+- Background Light: #F9FAFB or White
+- Text Primary (Dark): #1F2937
+- Text Secondary (Gray): #6B7280
