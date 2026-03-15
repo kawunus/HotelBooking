@@ -1,0 +1,92 @@
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 80px 20px 30px;
+    margin-top: 100px;
+  }
+  
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer__brand {
+    margin-bottom: 50px;
+  }
+  
+  .footer__desc {
+    color: #9CA3AF;
+    font-size: 14px;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 30px;
+  }
+  
+  .footer__col-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+  }
+  
+  .footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer__link {
+    color: #9CA3AF;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer__link:hover {
+    color: var(--color-green);
+  }
+  
+  .footer__list--contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #9CA3AF;
+    font-size: 14px;
+  }
+  
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6B7280;
+    font-size: 14px;
+  }
+  
+  .footer__socials {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer__social-link {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Адаптив для подвала */
+  @media (max-width: 768px) {
+    .footer__links { grid-template-columns: 1fr; }
+    .footer__bottom { flex-direction: column; gap: 20px; text-align: center; }
+  }
