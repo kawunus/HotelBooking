@@ -1,284 +1,563 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find your perfect escape | HotelBooking</title>
-    <link rel="stylesheet" href="css/styles.css">
-    </head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
     <header class="header" itemscope itemtype="https://schema.org/Organization">
-        <div class="header__container">
-            <a href="/" class="logo">
-                <img src="images/logo.png" alt="HotelBooking" class="logo__img" itemprop="logo">
-            </a>
-            
-            <input type="checkbox" id="burger-toggle" class="burger-checkbox">
-            
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <button class="header__user-btn" aria-label="Личный кабинет">
-                            <img src="images/user.png" alt="Профиль" aria-hidden="true">
-                        </button>
-                    </li>
-                    <li class="nav__item"><a href="#destinations" class="nav__link">Destinations</a></li>
-                    <li class="nav__item"><a href="#experiences" class="nav__link">Experiences</a></li>
-                    <li class="nav__item"><a href="#offers" class="nav__link">Offers</a></li>
-                    <li class="nav__item"><a href="#journal" class="nav__link">Journal</a></li>
-                </ul>
-            </nav>
-    
-            <div class="header__actions">
-                <label for="burger-toggle" class="burger-btn" aria-label="Открыть меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
+      <div class="header__container">
+        <a href="/" class="logo">
+          <img
+            src="images/logo.png"
+            alt="HotelBooking"
+            class="logo__img"
+            itemprop="logo"
+          />
+        </a>
+
+        <input type="checkbox" id="burger-toggle" class="burger-checkbox" />
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <button class="header__user-btn" aria-label="Личный кабинет">
+                <img src="images/user.png" alt="Профиль" aria-hidden="true" />
+              </button>
+            </li>
+            <li class="nav__item">
+              <a href="#destinations" class="nav__link">Destinations</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experiences" class="nav__link">Experiences</a>
+            </li>
+            <li class="nav__item">
+              <a href="#offers" class="nav__link">Offers</a>
+            </li>
+            <li class="nav__item">
+              <a href="#journal" class="nav__link">Journal</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <label
+            for="burger-toggle"
+            class="burger-btn"
+            aria-label="Открыть меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
         </div>
+      </div>
     </header>
 
     <main id="main" class="main">
-        
-        <section class="hero">
-            <div class="hero__container">
-                <span class="hero__pre-title">The art of travel</span>
-                <h1 class="hero__title">Find your <span class="hero__title-accent">perfect escape.</span></h1>
-                
-                <form class="search-form" action="#" method="GET">
-                    <div class="search-form__group">
-                        <label for="destination" class="search-form__label">Destination</label>
-                        <input type="text" id="destination" class="search-form__input" placeholder="Where to?">
-                    </div>
-                    <div class="search-form__group">
-                        <label for="date" class="search-form__label">Date</label>
-                        <input type="text" id="date" class="search-form__input" placeholder="Select dates">
-                    </div>
-                    <div class="search-form__group">
-                        <label for="guests" class="search-form__label">Guests</label>
-                        <input type="text" id="guests" class="search-form__input" value="1 Guest, 1 Room" readonly>
-                    </div>
-                    <button type="submit" class="search-form__submit" aria-label="Найти отели">
-                        <img src="images/submit_button.png" alt="" aria-hidden="true">
-                    </button>
-                </form>
+      <section class="hero">
+        <div class="hero__container">
+          <span class="hero__pre-title">The art of travel</span>
+          <h1 class="hero__title">
+            Find your <span class="hero__title-accent">perfect escape.</span>
+          </h1>
+
+          <form class="search-form" action="#" method="GET">
+            <div class="search-form__group">
+              <label for="destination" class="search-form__label"
+                >Destination</label
+              >
+              <input
+                type="text"
+                id="destination"
+                class="search-form__input"
+                placeholder="Where to?"
+              />
             </div>
-        </section>
-
-        <section id="destinations" class="destinations">
-            <div class="destinations__header">
-                <div>
-                    <span class="destinations__pre-title">Handpicked collections</span>
-                    <h2 class="destinations__title">Featured <span class="destinations__title-accent">Destinations</span></h2>
-                </div>
-                <a href="#all" class="destinations__view-all">View All Offerings</a>
+            <div class="search-form__group">
+              <label for="date" class="search-form__label">Date</label>
+              <input
+                type="text"
+                id="date"
+                class="search-form__input"
+                placeholder="Select dates"
+              />
             </div>
-            
-            <div class="destinations__grid">
-                
-              <article class="card" itemscope itemtype="https://schema.org/Hotel">
-                <figure class="card__figure">
-                    <img src="images/30cd174c98f7468b902c8e45db52484b368ac7cd.jpg" alt="Деревянный домик Amanzi Lodge в лесу" class="card__img" itemprop="image">
-                    <figcaption class="card__badge">
-                        <img src="images/stars.png" alt="Рейтинг" aria-hidden="true"> 4.9
-                    </figcaption>
-                </figure>
-                <div class="card__body">
-                    <h3 class="card__title" itemprop="name">Amanzi Lodge</h3>
-                    <p class="card__location" itemprop="address">Bali, Indonesia</p>
-                    
-                    <div class="card__footer">
-                        <div class="card__price-box">
-                            <span class="card__price-label">Starting from</span>
-                            <span class="card__price-value" itemprop="priceRange">$250</span>
-                            <span class="card__price-period">/ night</span>
-                        </div>
-                        
-                        <div class="card__offer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <meta itemprop="price" content="250">
-                            <meta itemprop="priceCurrency" content="USD">
-                            <a href="#book" class="card__link-btn" aria-label="Перейти к Amanzi Lodge" itemprop="url">
-                                <img src="images/go_to.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="card" itemscope itemtype="https://schema.org/Hotel">
-                <figure class="card__figure">
-                    <img src="images/b459880cca6e9e64612271ca1f09376db511fbbf.jpg" alt="Интерьер номера The Glacial с панорамным видом на горы" class="card__img" itemprop="image">
-                    <figcaption class="card__badge">
-                        <img src="images/stars.png" alt="Рейтинг" aria-hidden="true"> 5.0
-                    </figcaption>
-                </figure>
-                <div class="card__body">
-                    <h3 class="card__title" itemprop="name">The Glacial</h3>
-                    <p class="card__location" itemprop="address">Zermatt, Switzerland</p>
-                    
-                    <div class="card__footer">
-                        <div class="card__price-box">
-                            <span class="card__price-label">Starting from</span>
-                            <span class="card__price-value" itemprop="priceRange">$450</span>
-                            <span class="card__price-period">/ night</span>
-                        </div>
-                        
-                        <div class="card__offer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <meta itemprop="price" content="450">
-                            <meta itemprop="priceCurrency" content="USD">
-                            <a href="#book" class="card__link-btn" aria-label="Перейти к The Glacial" itemprop="url">
-                                <img src="images/go_to.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="card" itemscope itemtype="https://schema.org/Hotel">
-                <figure class="card__figure">
-                    <img src="images/7a3ef77f8a2503cdcbbae937319557d5f5ec389c.jpg" alt="Терраса Villa Bianco на закате" class="card__img" itemprop="image">
-                    <figcaption class="card__badge">
-                        <img src="images/stars.png" alt="Рейтинг" aria-hidden="true"> 4.8
-                    </figcaption>
-                </figure>
-                <div class="card__body">
-                    <h3 class="card__title" itemprop="name">Villa Bianco</h3>
-                    <p class="card__location" itemprop="address">Santorini, Greece</p>
-                    
-                    <div class="card__footer">
-                        <div class="card__price-box">
-                            <span class="card__price-label">Starting from</span>
-                            <span class="card__price-value" itemprop="priceRange">$320</span>
-                            <span class="card__price-period">/ night</span>
-                        </div>
-                        
-                        <div class="card__offer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <meta itemprop="price" content="320">
-                            <meta itemprop="priceCurrency" content="USD">
-                            <a href="#book" class="card__link-btn" aria-label="Перейти к Villa Bianco" itemprop="url">
-                                <img src="images/go_to.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
+            <div class="search-form__group">
+              <label for="guests" class="search-form__label">Guests</label>
+              <input
+                type="text"
+                id="guests"
+                class="search-form__input"
+                value="1 Guest, 1 Room"
+                readonly
+              />
             </div>
-        </section>
+            <button
+              type="submit"
+              class="search-form__submit"
+              aria-label="Найти отели"
+            >
+              <img src="images/submit_button.png" alt="" aria-hidden="true" />
+            </button>
+          </form>
+        </div>
+      </section>
 
-        <aside class="stories">
-            <div class="stories__content">
-                <span class="stories__pre-title">Guest stories</span>
-                <h2 class="stories__title">Moments of <span class="stories__title-accent">pure joy.</span></h2>
-                <p class="stories__desc">Discover how we've helped travelers find their perfect sanctuary around the globe. Real stories from real explorers.</p>
-                <div class="stories__controls">
-                    <button class="stories__btn stories__btn--prev" aria-label="Предыдущий отзыв">
-                        <img src="images/previos_button.png" alt="">
-                    </button>
-                    <button class="stories__btn stories__btn--next" aria-label="Следующий отзыв">
-                        <img src="images/next_button.png" alt="">
-                    </button>
+      <section id="destinations" class="destinations">
+        <div class="destinations__header">
+          <div>
+            <span class="destinations__pre-title">Handpicked collections</span>
+            <h2 class="destinations__title">
+              Featured
+              <span class="destinations__title-accent">Destinations</span>
+            </h2>
+          </div>
+          <a href="#all" class="destinations__view-all">View All Offerings</a>
+        </div>
+
+        <div class="filters">
+          <div class="filters__group">
+            <label for="price-filter"
+              >Max Price: $<span id="price-value">500</span></label
+            >
+            <input
+              type="range"
+              id="price-filter"
+              min="100"
+              max="600"
+              value="500"
+              step="10"
+            />
+          </div>
+          <div class="filters__group filters__amenities">
+            <label
+              ><input type="checkbox" value="wifi" class="amenity-filter" />
+              WiFi</label
+            >
+            <label
+              ><input type="checkbox" value="pool" class="amenity-filter" />
+              Pool</label
+            >
+            <label
+              ><input type="checkbox" value="spa" class="amenity-filter" />
+              Spa</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="restaurant"
+                class="amenity-filter"
+              />
+              Restaurant</label
+            >
+          </div>
+        </div>
+
+        <div class="destinations__grid">
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/Hotel"
+            data-price="250"
+            data-amenities="wifi,pool"
+          >
+            <figure class="card__figure">
+              <img
+                src="images/30cd174c98f7468b902c8e45db52484b368ac7cd.jpg"
+                alt="Деревянный домик Amanzi Lodge в лесу"
+                class="card__img"
+                itemprop="image"
+              />
+              <figcaption class="card__badge">
+                <img src="images/stars.png" alt="Рейтинг" aria-hidden="true" />
+                4.9
+              </figcaption>
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title" itemprop="name">Amanzi Lodge</h3>
+              <p class="card__location" itemprop="address">Bali, Indonesia</p>
+
+              <div class="card__footer">
+                <div class="card__price-box">
+                  <span class="card__price-label">Starting from</span>
+                  <span class="card__price-value" itemprop="priceRange"
+                    >$250</span
+                  >
+                  <span class="card__price-period">/ night</span>
                 </div>
+
+                <div
+                  class="card__offer"
+                  itemprop="offers"
+                  itemscope
+                  itemtype="https://schema.org/Offer"
+                >
+                  <meta itemprop="price" content="250" />
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <a
+                    href="#book"
+                    class="card__link-btn"
+                    aria-label="Перейти к Amanzi Lodge"
+                    itemprop="url"
+                  >
+                    <img src="images/go_to.png" alt="" />
+                  </a>
+                </div>
+              </div>
             </div>
+          </article>
 
-            <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/Hotel"
+            data-price="450"
+            data-amenities="spa,restaurant"
+          >
+            <figure class="card__figure">
+              <img
+                src="images/b459880cca6e9e64612271ca1f09376db511fbbf.jpg"
+                alt="Интерьер номера The Glacial с панорамным видом на горы"
+                class="card__img"
+                itemprop="image"
+              />
+              <figcaption class="card__badge">
+                <img src="images/stars.png" alt="Рейтинг" aria-hidden="true" />
+                5.0
+              </figcaption>
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title" itemprop="name">The Glacial</h3>
+              <p class="card__location" itemprop="address">
+                Zermatt, Switzerland
+              </p>
 
-                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
-                    <meta itemprop="name" content="HotelBooking">
+              <div class="card__footer">
+                <div class="card__price-box">
+                  <span class="card__price-label">Starting from</span>
+                  <span class="card__price-value" itemprop="priceRange"
+                    >$450</span
+                  >
+                  <span class="card__price-period">/ night</span>
                 </div>
-                
-                <div class="testimonial__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <meta itemprop="ratingValue" content="5">
-                    <img src="images/stars.png" alt="5 звезд" class="testimonial__star">
-                    <img src="images/stars.png" alt="" aria-hidden="true" class="testimonial__star">
-                    <img src="images/stars.png" alt="" aria-hidden="true" class="testimonial__star">
-                    <img src="images/stars.png" alt="" aria-hidden="true" class="testimonial__star">
-                    <img src="images/stars.png" alt="" aria-hidden="true" class="testimonial__star">
+
+                <div
+                  class="card__offer"
+                  itemprop="offers"
+                  itemscope
+                  itemtype="https://schema.org/Offer"
+                >
+                  <meta itemprop="price" content="450" />
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <a
+                    href="#book"
+                    class="card__link-btn"
+                    aria-label="Перейти к The Glacial"
+                    itemprop="url"
+                  >
+                    <img src="images/go_to.png" alt="" />
+                  </a>
                 </div>
-                
-                <blockquote class="testimonial__quote">
-                    <p itemprop="reviewBody">"The platform made it incredibly easy to find a secluded spot that matched our aesthetic perfectly. Seamless booking and exceptional property quality."</p>
-                </blockquote>
-                
-                <div class="testimonial__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <img src="images/ca780880e92374bc91302a2180cc519a61cb8885.jpg" alt="Фото Элеанор Хьюз" class="testimonial__author-img">
-                    <div class="testimonial__author-info">
-                        <h3 class="testimonial__author-name" itemprop="name">Eleanor Hughes</h3>
-                        <span class="testimonial__author-role">Travel Photographer</span>
-                    </div>
-                </div>
+              </div>
             </div>
-        </aside>
+          </article>
 
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/Hotel"
+            data-price="320"
+            data-amenities="wifi,spa"
+          >
+            <figure class="card__figure">
+              <img
+                src="images/7a3ef77f8a2503cdcbbae937319557d5f5ec389c.jpg"
+                alt="Терраса Villa Bianco на закате"
+                class="card__img"
+                itemprop="image"
+              />
+              <figcaption class="card__badge">
+                <img src="images/stars.png" alt="Рейтинг" aria-hidden="true" />
+                4.8
+              </figcaption>
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title" itemprop="name">Villa Bianco</h3>
+              <p class="card__location" itemprop="address">Santorini, Greece</p>
+
+              <div class="card__footer">
+                <div class="card__price-box">
+                  <span class="card__price-label">Starting from</span>
+                  <span class="card__price-value" itemprop="priceRange"
+                    >$320</span
+                  >
+                  <span class="card__price-period">/ night</span>
+                </div>
+
+                <div
+                  class="card__offer"
+                  itemprop="offers"
+                  itemscope
+                  itemtype="https://schema.org/Offer"
+                >
+                  <meta itemprop="price" content="320" />
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <a
+                    href="#book"
+                    class="card__link-btn"
+                    aria-label="Перейти к Villa Bianco"
+                    itemprop="url"
+                  >
+                    <img src="images/go_to.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="stories">
+        <div class="stories__content">
+          <span class="stories__pre-title">Guest stories</span>
+          <h2 class="stories__title">
+            Moments of <span class="stories__title-accent">pure joy.</span>
+          </h2>
+          <p class="stories__desc">
+            Discover how we've helped travelers find their perfect sanctuary
+            around the globe. Real stories from real explorers.
+          </p>
+          <div class="stories__controls">
+            <button
+              class="stories__btn stories__btn--prev"
+              aria-label="Предыдущий отзыв"
+            >
+              <img src="images/previos_button.png" alt="" />
+            </button>
+            <button
+              class="stories__btn stories__btn--next"
+              aria-label="Следующий отзыв"
+            >
+              <img src="images/next_button.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+          <div
+            itemprop="itemReviewed"
+            itemscope
+            itemtype="https://schema.org/Organization"
+          >
+            <meta itemprop="name" content="HotelBooking" />
+          </div>
+
+          <div
+            class="testimonial__rating"
+            itemprop="reviewRating"
+            itemscope
+            itemtype="https://schema.org/Rating"
+          >
+            <meta itemprop="ratingValue" content="5" />
+            <img
+              src="images/stars.png"
+              alt="5 звезд"
+              class="testimonial__star"
+            />
+            <img
+              src="images/stars.png"
+              alt=""
+              aria-hidden="true"
+              class="testimonial__star"
+            />
+            <img
+              src="images/stars.png"
+              alt=""
+              aria-hidden="true"
+              class="testimonial__star"
+            />
+            <img
+              src="images/stars.png"
+              alt=""
+              aria-hidden="true"
+              class="testimonial__star"
+            />
+            <img
+              src="images/stars.png"
+              alt=""
+              aria-hidden="true"
+              class="testimonial__star"
+            />
+          </div>
+
+          <blockquote class="testimonial__quote">
+            <p itemprop="reviewBody">
+              "The platform made it incredibly easy to find a secluded spot that
+              matched our aesthetic perfectly. Seamless booking and exceptional
+              property quality."
+            </p>
+          </blockquote>
+
+          <div
+            class="testimonial__author"
+            itemprop="author"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
+            <img
+              src="images/ca780880e92374bc91302a2180cc519a61cb8885.jpg"
+              alt="Фото Элеанор Хьюз"
+              class="testimonial__author-img"
+            />
+            <div class="testimonial__author-info">
+              <h3 class="testimonial__author-name" itemprop="name">
+                Eleanor Hughes
+              </h3>
+              <span class="testimonial__author-role">Travel Photographer</span>
+            </div>
+          </div>
+        </div>
+      </aside>
     </main>
 
-    <footer class="footer" itemscope itemtype="https://schema.org/LocalBusiness">
-        <div class="footer__container">
-            <div class="footer__brand">
-                <a href="/" class="logo">
-                    <img src="images/logo.png" alt="HotelBooking" class="logo__img" itemprop="image">
-                    <span class="sr-only" itemprop="name">HotelBooking</span>
-                </a>
-                <p class="footer__desc" itemprop="description">Curating extraordinary stays for the modern traveler. Redefining luxury through minimalist design and flawless experiences.</p>
-            </div>
-
-            <div class="footer__links">
-                <div class="footer__col">
-                    <h3 class="footer__col-title">Company</h3>
-                    <ul class="footer__list">
-                        <li><a href="#about" class="footer__link">About Us</a></li>
-                        <li><a href="#careers" class="footer__link">Careers</a></li>
-                        <li><a href="#press" class="footer__link">Press</a></li>
-                        <li><a href="#journal" class="footer__link">Journal</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__col-title">Features</h4>
-                    <ul class="footer__list">
-                        <li><a href="#destinations" class="footer__link">Destinations</a></li>
-                        <li><a href="#resorts" class="footer__link">Resorts</a></li>
-                        <li><a href="#villas" class="footer__link">Villas</a></li>
-                        <li><a href="#experiences" class="footer__link">Experiences</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__col-title">Contact</h4>
-                    <ul class="footer__list footer__list--contact">
-                        <li>
-                            <img src="images/email.png" alt="" aria-hidden="true">
-                            <a href="mailto:hello@hotelbooking.com" class="footer__link" itemprop="email">hello@hotelbooking.com</a>
-                        </li>
-                        <li>
-                            <img src="images/phone.png" alt="" aria-hidden="true">
-                            <a href="tel:+15551234567" class="footer__link" itemprop="telephone">+1 (555) 123-4567</a>
-                        </li>
-                        <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                            <img src="images/addres.png" alt="" aria-hidden="true">
-                            <span class="footer__address-text">
-                                <span itemprop="streetAddress">124 Design Avenue, Suite 401</span><br>
-                                <span itemprop="addressLocality">San Francisco</span>,
-                                <span itemprop="addressRegion">CA</span> 
-                                <span itemprop="postalCode">94107</span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer__bottom">
-                <p class="footer__copyright">© <time datetime="2026">2026</time> HotelBooking. All rights reserved.</p>
-                <div class="footer__socials">
-                    <a href="#ig" class="footer__social-link" aria-label="Instagram"><img src="images/instagram.png" alt=""></a>
-                    <a href="#tw" class="footer__social-link" aria-label="Twitter"><img src="images/twitter.png" alt=""></a>
-                    <a href="#li" class="footer__social-link" aria-label="LinkedIn"><img src="images/linkedin.png" alt=""></a>
-                </div>
-            </div>
+    <footer
+      class="footer"
+      itemscope
+      itemtype="https://schema.org/LocalBusiness"
+    >
+      <div class="footer__container">
+        <div class="footer__brand">
+          <a href="/" class="logo">
+            <img
+              src="images/logo.png"
+              alt="HotelBooking"
+              class="logo__img"
+              itemprop="image"
+            />
+            <span class="sr-only" itemprop="name">HotelBooking</span>
+          </a>
+          <p class="footer__desc" itemprop="description">
+            Curating extraordinary stays for the modern traveler. Redefining
+            luxury through minimalist design and flawless experiences.
+          </p>
         </div>
+
+        <div class="footer__links">
+          <div class="footer__col">
+            <h3 class="footer__col-title">Company</h3>
+            <ul class="footer__list">
+              <li><a href="#about" class="footer__link">About Us</a></li>
+              <li><a href="#careers" class="footer__link">Careers</a></li>
+              <li><a href="#press" class="footer__link">Press</a></li>
+              <li><a href="#journal" class="footer__link">Journal</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Features</h4>
+            <ul class="footer__list">
+              <li>
+                <a href="#destinations" class="footer__link">Destinations</a>
+              </li>
+              <li><a href="#resorts" class="footer__link">Resorts</a></li>
+              <li><a href="#villas" class="footer__link">Villas</a></li>
+              <li>
+                <a href="#experiences" class="footer__link">Experiences</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Contact</h4>
+            <ul class="footer__list footer__list--contact">
+              <li>
+                <img src="images/email.png" alt="" aria-hidden="true" />
+                <a
+                  href="mailto:hello@hotelbooking.com"
+                  class="footer__link"
+                  itemprop="email"
+                  >hello@hotelbooking.com</a
+                >
+              </li>
+              <li>
+                <img src="images/phone.png" alt="" aria-hidden="true" />
+                <a
+                  href="tel:+15551234567"
+                  class="footer__link"
+                  itemprop="telephone"
+                  >+1 (555) 123-4567</a
+                >
+              </li>
+              <li
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+              >
+                <img src="images/addres.png" alt="" aria-hidden="true" />
+                <span class="footer__address-text">
+                  <span itemprop="streetAddress"
+                    >124 Design Avenue, Suite 401</span
+                  ><br />
+                  <span itemprop="addressLocality">San Francisco</span>,
+                  <span itemprop="addressRegion">CA</span>
+                  <span itemprop="postalCode">94107</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © <time datetime="2026">2026</time> HotelBooking. All rights
+            reserved.
+          </p>
+          <div class="footer__socials">
+            <a href="#ig" class="footer__social-link" aria-label="Instagram"
+              ><img src="images/instagram.png" alt=""
+            /></a>
+            <a href="#tw" class="footer__social-link" aria-label="Twitter"
+              ><img src="images/twitter.png" alt=""
+            /></a>
+            <a href="#li" class="footer__social-link" aria-label="LinkedIn"
+              ><img src="images/linkedin.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <div id="booking-modal" class="modal">
+      <div class="modal__content">
+        <span class="modal__close">&times;</span>
+        <h2 id="modal-hotel-name">Hotel Name</h2>
+        <p>Base price: $<span id="modal-base-price">0</span> / night</p>
+
+        <form id="booking-form" class="calculator-form">
+          <div class="calculator-form__group">
+            <label for="check-in">Check-in Date</label>
+            <input type="date" id="check-in" required />
+          </div>
+          <div class="calculator-form__group">
+            <label for="check-out">Check-out Date</label>
+            <input type="date" id="check-out" required />
+          </div>
+
+          <div class="calculator-form__total">
+            Total Nights: <span id="total-nights">0</span><br />
+            <strong>Total Price: $<span id="total-price">0</span></strong>
+          </div>
+
+          <button type="submit" class="btn-primary">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
 </html>

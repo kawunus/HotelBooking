@@ -43,3 +43,95 @@ a {
   position: absolute;
   top: -100px;
 }
+
+/* --- СТИЛИ ДЛЯ ФИЛЬТРОВ --- */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.filters__group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.filters__amenities label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 27, 37, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+.modal.active {
+  display: flex;
+}
+.modal__content {
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--color-gray);
+}
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.calculator-form__group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+.calculator-form__total {
+  background: var(--color-bg);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: right;
+  font-size: 18px;
+}
+.btn-primary {
+  background: var(--color-green);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: var(--color-green-dark);
+}
