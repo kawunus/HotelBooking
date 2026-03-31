@@ -1,0 +1,101 @@
+
+   .header {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    padding: 30px 0;
+    z-index: 100;
+  }
+  
+  .header__container {
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  
+  /* 1. Прячем служебный чекбокс */
+  .burger-checkbox {
+    display: none;
+  }
+  
+  /* ВАЖНО: Логотип и правый блок с кнопками ДОЛЖНЫ быть поверх выпадающего меню! */
+  .logo, .header__actions {
+    position: relative;
+    z-index: 1000; /* Очень высокий слой */
+    display: flex; align-items: center; gap: 20px;
+  }
+  
+  /* 2. Десктопное меню */
+  .nav__list {
+    display: flex; list-style: none; gap: 40px;
+  }
+  .nav__link {
+    color: var(--color-white, #FFFFFF); 
+    font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+  }
+  
+  /* 3. Кнопка бургера (прячем на ПК) */
+  .burger-btn {
+    display: none; flex-direction: column; justify-content: space-between;
+    width: 30px; height: 20px; cursor: pointer;
+  }
+  
+  .burger-btn span {
+    display: block; width: 100%; height: 2px;
+    background-color: var(--color-white, #FFFFFF); 
+    transition: all 0.3s ease;
+  }
+  
+  .header__user-btn {
+    background: none; border: none; cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    
+    /* Показываем кнопку бургера */
+    .burger-btn { 
+      display: flex; 
+    }
+  
+    /* ВАЖНО: Само выпадающее меню */
+    .nav {
+      position: fixed; /* FIXED, чтобы меню точно перекрыло ВЕСЬ экран */
+      top: 0; left: 0; width: 100%; height: 100vh;
+      background-color: var(--color-dark, #121B25);
+      display: flex; justify-content: center; align-items: center;
+      
+      /* Прячем наверх за пределы экрана */
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease-in-out;
+      
+      /* ВАЖНО: z-index 999 (меню) меньше чем 1000 (кнопки), чтобы мы могли нажать на крестик и закрыть его! */
+      z-index: 999; 
+    }
+  
+    /* Настройки ссылок в мобильном меню */
+    .nav__list { 
+      flex-direction: column; align-items: center; gap: 40px; 
+    }
+    .nav__link { 
+      font-size: 24px; /* Делаем текст огромным для удобства на телефоне */
+    }
+  
+       
+    /* Если инпут нажат -> выкатываем соседний блок .nav вниз */
+    .burger-checkbox:checked ~ .nav {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    /* Если инпут нажат -> превращаем полосочки соседнего блока .burger-btn в крестик */
+    .burger-checkbox:checked ~ .header__actions .burger-btn span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .burger-checkbox:checked ~ .header__actions .burger-btn span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger-checkbox:checked ~ .header__actions .burger-btn span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }

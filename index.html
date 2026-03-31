@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find your perfect escape | HotelBooking</title>
+    <link rel="stylesheet" href="css/styles.css">
     </head>
 <body>
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
@@ -14,18 +15,29 @@
                 <img src="images/logo.png" alt="HotelBooking" class="logo__img" itemprop="logo">
             </a>
             
+            <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+            
             <nav class="nav">
                 <ul class="nav__list">
+                    <li class="nav__item">
+                        <button class="header__user-btn" aria-label="Личный кабинет">
+                            <img src="images/user.png" alt="Профиль" aria-hidden="true">
+                        </button>
+                    </li>
                     <li class="nav__item"><a href="#destinations" class="nav__link">Destinations</a></li>
                     <li class="nav__item"><a href="#experiences" class="nav__link">Experiences</a></li>
                     <li class="nav__item"><a href="#offers" class="nav__link">Offers</a></li>
                     <li class="nav__item"><a href="#journal" class="nav__link">Journal</a></li>
                 </ul>
             </nav>
-
-            <button class="header__user-btn" aria-label="Личный кабинет">
-                <img src="images/user.png" alt="" aria-hidden="true">
-            </button>
+    
+            <div class="header__actions">
+                <label for="burger-toggle" class="burger-btn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
         </div>
     </header>
 
