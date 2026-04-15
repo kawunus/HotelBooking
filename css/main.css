@@ -414,3 +414,40 @@
       object-fit: contain;
     }
   }
+
+
+/* --- ВИДЖЕТ ПОГОДЫ (API) --- */
+.weather-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+  color: var(--color-white);
+  animation: fadeIn 0.5s ease;
+}
+
+.weather-card img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.weather-card h3 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.weather-card p {
+  font-size: 14px;
+  color: #d1d5db;
+  text-transform: capitalize;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
