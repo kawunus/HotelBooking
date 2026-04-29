@@ -1,7 +1,6 @@
 import { initFilters } from './components/filters.js';
 import { initCalculator } from './components/calculator.js';
 
-// Импорты для новой лабораторной работы
 import { fetchWeather } from './api/apiService.js';
 import { storageHelper } from './storage/localStorage.js';
 import { parseWeatherData } from './utils/dataParser.js';
@@ -12,10 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initCalculator();
 
   const searchForm = document.querySelector('.search-form');
-  const weatherWidget = document.getElementById('weather-widget'); // Куда выводим погоду
+  const weatherWidget = document.getElementById('weather-widget'); 
   const destinationInput = document.getElementById('destination');
 
-  // Восстанавливаем последний поиск при загрузке страницы
   const lastSearch = storageHelper.load('lastDestination');
   if (lastSearch && destinationInput) {
     destinationInput.value = lastSearch;
@@ -33,14 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Сохраняем в LocalStorage
       storageHelper.save('lastDestination', destination);
-      
-      // Показываем состояние загрузки
       weatherWidget.innerHTML = `<p style="color: white; margin-top: 15px;">Loading weather for ${destination}...</p>`;
 
       try {
-        // Асинхронный запрос
         const rawData = await fetchWeather(destination);
-        // Парсинг
         const weather = parseWeatherData(rawData);
 
         // Отрисовка
